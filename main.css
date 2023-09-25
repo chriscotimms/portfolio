@@ -1,11 +1,78 @@
 
+/*BODY*/
+
 body {
     margin: 0;
+    background-color: black;
     font-family: 'Hanken Grotesk', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;  
+    /* margin: 1rem; */
+    padding-inline-start: 0px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+
 
 /*GRIDS*/
+
+.menucontainer {
+    display:grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: repeat(13, 1fr);
+    
+}
+
+.menucontent {
+    padding: 1rem;
+    background-color: rgb(252, 86, 255);
+    border-radius: 1.35rem;
+    margin:0.125rem;
+}
+
+.menucontent.about {
+    color: blue;
+    grid-column: 1 / 3;
+    grid-row: 1 / 13;
+}
+
+.menucontent.work {
+    color: rgb(0, 255, 123);
+    grid-column: 3 / 4;
+    grid-row: 1 / 7;
+}
+
+.menucontent.contact {
+    color: rgb(255, 204, 0);
+    grid-column: 3 / 4;
+    grid-row: 7 / 13;
+}
+
+.menucontent.access {
+    color: rgb(255, 204, 0);
+    grid-column: 4 / 5;
+    grid-row: 1 / 7;
+}
+
+.menucontent.dev {
+    color: blue;
+    grid-column: 4 / 5;
+    grid-row: 7 / 10;
+}
+
+.menucontent.from {
+    color: rgb(0, 255, 123);
+    grid-column: 4 / 5;
+    grid-row: 10 / 11;
+}
 
 .container {
     position: relative;
@@ -34,16 +101,19 @@ body {
 
 /*ID SECTIONS*/
 
-#who {
-    background-color: rgb(206, 206, 255);
-    
+#about {
+    background-color: rgb(206, 206, 255);   
 }
 
-#what {
+#work {
     background-color: rgb(144, 144, 254);
 }
 
-#how {
+#access {
+    background-color: rgb(13, 13, 81);
+}
+
+#dev {
     background-color: rgb(54, 54, 200);
 }
 
@@ -51,6 +121,6 @@ body {
     background-color: rgb(43, 43, 149);
 }
 
-#with {
+#contact {
     background-color: blue;
 }
