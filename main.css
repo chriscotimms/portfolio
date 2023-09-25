@@ -1,0 +1,56 @@
+
+body {
+    margin: 0;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+
+/*GRIDS*/
+
+.container {
+    position: relative;
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap:0.125rem;
+}
+
+.section {
+    font-weight: 400;
+    display:grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+    background-color: rgb(255, 51, 122);
+    /*grid-gap:0.5rem;*/
+}
+
+.article1 {
+    background-color: rgb(129, 255, 196);
+    margin:1rem;
+}
+
+
+
+/*ID SECTIONS*/
+
+#who {
+    background-color: rgb(206, 206, 255);
+    
+}
+
+#what {
+    background-color: rgb(144, 144, 254);
+}
+
+#how {
+    background-color: rgb(54, 54, 200);
+}
+
+#from {
+    background-color: rgb(43, 43, 149);
+}
+
+#with {
+    background-color: blue;
+}
