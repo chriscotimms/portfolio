@@ -4,15 +4,25 @@
 let focusNow = null;
 
 document.addEventListener('focusin', function() {
+if (focusNow !== null) {
+    //detransition from old focus
+
+    console.log("old"+focusNow.id);
+}
   focusNow = document.activeElement;
   // console log focus elements
-  console.log(focusNow.parentNode);
+  console.log(focusNow.id);
+  //transition into new element to focus
 }, true);
 
 document.addEventListener('mouseenter', function(event) {
+    if (focusNow !== null) {
+        //detransition from old focus
+        console.log("old"+focusNow.id);
+    }
     focusNow = event.target;
     // console log focus elements
-    console.log(focusNow);
+    console.log(focusNow.id);
   }, true);
 
 // Enter key to activate focused element like mouseclick
