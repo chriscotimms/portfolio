@@ -1,9 +1,15 @@
 
 /*BODY*/
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
-    background-color: black;
+    background-color: rgb(233, 233, 233);
+    color: black;
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 14px;
     letter-spacing: normal;
@@ -25,29 +31,35 @@ ul {
 
 
 /*GRIDS*/
+.header_main {
+    height:100vh;
+    width: 100vw;
+    max-width:100%;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
 
 .menucontainer {
+    justify-self: center;
+    align-self: center;
     display:grid;
-    grid-template-columns: repeat(4, 2fr);
-    grid-template-rows: repeat(4, 165px);
-    
+    grid-template-columns: repeat(4, minmax(1fr, 2fr) );
+    grid-template-rows: repeat(4, minmax(1fr,2fr) );
 }
 
 .button {
     background-color: rgb(252, 86, 255);
     border:none;
-    border-radius: 2.8rem;
-    margin:0.125rem;
-    min-height: 100px;
-    min-width: 200px;
-    margin: 0.25rem;
-    transition: 0.5s;
+    shape-outside: circle();
+    clip-path: circle();
+    padding: 100px;
+    font-size: 2em;
 }
 
 .button:hover {
     background-color: #816514;
     /* padding:0.5rem; */
-    margin: 0.5rem;
     transition: 0.5s;
 }
 
@@ -61,38 +73,18 @@ ul {
 
 .button.about {
     color: blue;
-    grid-column: 1 / 3;
-    grid-row: 1 / 5;
 }
 
 .button.work {
     color: rgb(0, 255, 123);
-    grid-column: 3 / 4;
-    grid-row: 1 / 3;
 }
 
 .button.access {
     color: rgb(255, 204, 0);
-    grid-column: 4 / 5;
-    grid-row: 1 / 3;
-}
-
-.button.dev {
-    color: rgb(187, 255, 103);
-    grid-column: 3 / 4;
-    grid-row: 3 / 4;
-}
-
-.button.from {
-    color: rgb(0, 255, 123);
-    grid-column: 3 / 4;
-    grid-row: 4 / 5;
 }
 
 .button.contact {
     color: rgb(255, 204, 0);
-    grid-column: 4 / 5;
-    grid-row: 3 / 5;
 }
 
 .container {
@@ -100,7 +92,6 @@ ul {
     display:grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
-    grid-gap:0.125rem;
 }
 
 .section {
@@ -116,8 +107,17 @@ ul {
 .article1 {
     background-color: rgb(129, 255, 196);
     margin:1rem;
+    font-size: 4rem;
 }
 
+
+.shape {
+    float: left;
+    height: 100%;
+    justify-content: center;
+    shape-outside: linear-gradient(45deg, #0277bd, transparent 50%);
+    width: 300px;
+  }
 
 
 /*ID SECTIONS*/
