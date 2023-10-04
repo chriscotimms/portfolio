@@ -1,0 +1,46 @@
+/* about button */
+
+
+
+.shape, .shape1 {
+  height: 100%;
+    width: 50%;
+}
+
+.shape {
+    /* justify-content: center; */
+    clip-path: polygon(0 0, 0 0, 0 100%, 100% 100%);
+    float: left;
+    shape-outside: polygon(0 0, 0 0, 0 100%, 100% 100%);
+    background-image: linear-gradient(to right, #f0c27b, #4b1248);
+  }
+
+  .shape1 {
+    clip-path: polygon(0 0, 0 0, 100% 100%, 100% 0);
+    float: right;
+    shape-outside: polygon(0 0, 0 0, 100% 100%, 100% 0);
+    background-image: linear-gradient(to right, #f0c27b, #4b1248);
+
+  }
+
+  /* ANIMATIONS */
+
+
+
+
+/* REVEAL TEXT EXPERIEMNTS */
+
+.reveal {
+  color: #0000;
+  background: 
+    linear-gradient(red 0 0) no-repeat;
+  background-size: 0% 100%; /* we start at 0% 100% */
+  -webkit-background-clip: text;
+          background-clip: text;
+  animation: textRev 1s both;
+  animation-delay: 0s;
+}
+
+@keyframes textRev {
+  to {background-size: 100% 100%} /* we animate to 100% 100%*/
+}

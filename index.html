@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="about.css">
     <script src="index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,12 +15,27 @@
 <body>
     
 <header class="header_main">
-
     <nav class="menucontainer">
-        <button type="button" class="button" id="about">ABOUT</button>
-        <button type="button" class="button" id="work">WORK</button>
-        <button type="button" class="button" id="contact">CONTACT</button>
-        <button type="button" class="button" id="access">ACCESS SETTINGS</button> 
+        <button type="button" class="button about">
+            <div class="btnName">ABOUT</div>
+            <div class="righttoLeft">Who I am and what I do</div>
+        </button>
+
+        <button type="button" class="button work">
+            <div class="btnName">WORK</div>
+            <div class="righttoLeft">Some examples of work</div>
+        </button>
+
+        <button type="button" class="button contact">
+            <div class="btnName">CONTACT</div>
+            <div class="righttoLeft">Get in touch to consult</div>
+        </button>
+
+        <button type="button" class="button access">
+            <div class="btnName">SETTINGS</div>
+            <div class="righttoLeft">Change fonts and colour schemes</div>
+        </button> 
+
     </nav>
 </header>
 
@@ -32,9 +48,12 @@
         <h1>ABOUT</h1>
         <article class="article1">
 
-        <div class="shape"></div>
-        <p>I'm Chris Timms, a Front-End Web Developer (in-training!) with an interest in Accessibility. I have a fine art background, and want to learn and help contribute to developing the best practices of accessible approaches and solutions to Web Development.</p>
-        <div class="shape"></div>
+        <!-- <div class="shape"></div>
+        <div class="shape1"></div> -->
+        <p class="reveal">I'm Chris Timms, a Front-End Web Developer (in-training!) with an interest in Accessibility.</p> 
+        <br/>
+        <p>I have a fine art background, and want to learn and help contribute to developing the best practices of accessible approaches and solutions to Web Development.</p>
+        
     </article>  
     </section>
 

@@ -1,3 +1,9 @@
+:root {
+    --font-size: 30px;
+    --bg-col: rgb(233, 233, 233);
+    --txt-col: black;
+}
+
 
 /*BODY*/
 
@@ -7,11 +13,10 @@
 }
 
 body {
-    margin: 0;
-    background-color: rgb(233, 233, 233);
-    color: black;
+    background-color:var(--bg-col);
+    color: var(--txt-col);
     font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 14px;
+    font-size: var(--font-size);
     letter-spacing: normal;
     line-height: normal;
     text-align: left;
@@ -29,12 +34,11 @@ ul {
 }
 
 
-
-/*GRIDS*/
+/*HEADER*/
 .header_main {
-    height:100vh;
     width: 100vw;
     max-width:100%;
+    min-height: 100vh;
     display:grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -48,32 +52,60 @@ ul {
     grid-template-rows: repeat(4, minmax(1fr,2fr) );
 }
 
+
+/* HEADER - BUTTONS */
 .button {
     background-color: rgb(252, 86, 255);
     border:none;
     shape-outside: circle();
     clip-path: circle();
-    padding: 100px;
-    font-size: 2em;
+    padding: 4rem;
+    font-size: var(--font-size);
+    overflow: hidden;
 }
 
-.button:hover {
-    background-color: #816514;
+.btnName {
+    display:block;
+}
+  
+.righttoLeft {
+    display:none;
+    font-size: inherit;
+}
+
+.button:hover .btnName, .button:focus .btnName {
+    display:none;
+}
+
+.button:hover .righttoLeft, .button:focus .righttoLeft {
+    /* background-color: #4a2fff; */
+    /* padding:0.5rem; */
+    /* transition: 0.5s; */
+    display:block;
+    animation: righttoLeft 10s infinite linear;
+  }
+  
+  @keyframes righttoLeft {
+    0% {
+    transform: translateX(70%);
+    }
+    100% {
+      transform:translateX(-100%);
+    } 
+  }
+
+
+.button:hover, .button:focus {
+    background-color: #758404;
     /* padding:0.5rem; */
     transition: 0.5s;
-}
-
-.button:focus {
-    background-color: #8dffa6;
 }
 
 .button:active {
     background-color: #81b9ff;
 }
 
-.button.about {
-    color: blue;
-}
+
 
 .button.work {
     color: rgb(0, 255, 123);
@@ -88,18 +120,18 @@ ul {
 }
 
 .container {
-    position: relative;
+    /* position: relative; */
     display:grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
 
 .section {
+    height: auto;
     font-weight: 400;
     display:grid;
     grid-template-rows: 50px 1fr;
     grid-template-columns: 1fr;
-    margin: 1rem;
     background-color: rgb(255, 51, 122);
     /*grid-gap:0.5rem;*/
 }
@@ -107,24 +139,22 @@ ul {
 .article1 {
     background-color: rgb(129, 255, 196);
     margin:1rem;
-    font-size: 4rem;
+    font-size: var(--font-size);
 }
 
 
-.shape {
-    float: left;
-    height: 100%;
-    justify-content: center;
-    shape-outside: linear-gradient(45deg, #0277bd, transparent 50%);
-    width: 300px;
-  }
+
+
+
 
 
 /*ID SECTIONS*/
 
-#about {
-    background-color: rgb(206, 206, 255);   
-}
+
+/* #about::after {
+    content: "\a";
+    white-space: pre;
+} */
 
 #work {
     background-color: rgb(144, 144, 254);
