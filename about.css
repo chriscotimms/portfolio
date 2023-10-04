@@ -1,7 +1,5 @@
 /* about button */
 
-
-
 .shape, .shape1 {
   height: 100%;
     width: 50%;
@@ -30,17 +28,27 @@
 
 /* REVEAL TEXT EXPERIEMNTS */
 
-.reveal {
+ /* .reveal {
   color: #0000;
   background: 
-    linear-gradient(red 0 0) no-repeat;
-  background-size: 0% 100%; /* we start at 0% 100% */
+    linear-gradient(rgb(0, 0, 0) 0 0) no-repeat;
+  background-size: 100% 0%; 
   -webkit-background-clip: text;
           background-clip: text;
-  animation: textRev 1s both;
+  animation: textRev 4s both;
   animation-delay: 0s;
 }
 
 @keyframes textRev {
-  to {background-size: 100% 100%} /* we animate to 100% 100%*/
+  to {background-size: 100% 100%}
+}  */
+
+.reveal {
+  opacity:0%;
+  animation: textRev 1s both;
+  animation-timing-function: ease-in-out;
 }
+
+@keyframes textRev {
+  to {opacity: 100%}
+} 

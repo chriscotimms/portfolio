@@ -1,5 +1,5 @@
 :root {
-    --font-size: 30px;
+    --font-size: 36px;
     --bg-col: rgb(233, 233, 233);
     --txt-col: black;
 }
@@ -59,9 +59,10 @@ ul {
     border:none;
     shape-outside: circle();
     clip-path: circle();
-    padding: 4rem;
-    font-size: var(--font-size);
+    padding: 2em;
+    font-size: 1.3em;
     overflow: hidden;
+    text-align: center;
 }
 
 .btnName {
@@ -75,6 +76,7 @@ ul {
 
 .button:hover .btnName, .button:focus .btnName {
     display:none;
+    transition: 4s;
 }
 
 .button:hover .righttoLeft, .button:focus .righttoLeft {
@@ -98,7 +100,7 @@ ul {
 .button:hover, .button:focus {
     background-color: #758404;
     /* padding:0.5rem; */
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .button:active {
@@ -130,16 +132,26 @@ ul {
     height: auto;
     font-weight: 400;
     display:grid;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 100px 1fr;
     grid-template-columns: 1fr;
     background-color: rgb(255, 51, 122);
     /*grid-gap:0.5rem;*/
 }
 
+.hide {
+    opacity: 100%;
+    animation: textRev1 1s both;
+}
+
+@keyframes textRev1 {
+  to {opacity: 0%}
+} 
+
 .article1 {
     background-color: rgb(129, 255, 196);
     margin:1rem;
-    font-size: var(--font-size);
+    padding: 3rem;
+    font-size: 2em;
 }
 
 
@@ -151,12 +163,25 @@ ul {
 /*ID SECTIONS*/
 
 
-/* #about::after {
-    content: "\a";
-    white-space: pre;
-} */
+
+#about {
+    min-height: 100vh;
+      padding: 3rem;
+      font-size: 2em;
+}
+  
+#about h1 {
+    justify-self: center;
+    align-self: center;
+}
+  
+#about p {
+    justify-self: center;
+    align-self: center;
+}
 
 #work {
+    min-height: 100vh;
     background-color: rgb(144, 144, 254);
 }
 
@@ -173,5 +198,6 @@ ul {
 }
 
 #contact {
+    min-height: 100vh;
     background-color: blue;
 }
