@@ -21,6 +21,7 @@ body {
     line-height: normal;
     text-align: left;
     -webkit-font-smoothing: antialiased;
+    
 }
 
 a {
@@ -138,14 +139,8 @@ ul {
     /*grid-gap:0.5rem;*/
 }
 
-.hide {
-    opacity: 100%;
-    animation: textRev1 1s both;
-}
 
-@keyframes textRev1 {
-  to {opacity: 0%}
-} 
+
 
 .article1 {
     background-color: rgb(129, 255, 196);
@@ -162,12 +157,17 @@ ul {
 
 /*ID SECTIONS*/
 
-
+#header {
+    opacity:1;
+    transition: opacity 0.5s;
+}
 
 #about {
     min-height: 100vh;
       padding: 3rem;
       font-size: 2em;
+      opacity:1;
+      transition: opacity 0.5s;
 }
   
 #about h1 {
@@ -183,6 +183,7 @@ ul {
 #work {
     min-height: 100vh;
     background-color: rgb(144, 144, 254);
+    transition: opacity 0.5s;
 }
 
 #access {
@@ -190,14 +191,20 @@ ul {
 }
 
 #dev {
+    min-height: 100vh;
     background-color: rgb(54, 54, 200);
+    transition: opacity 0.5s;
 }
 
 #from {
+    min-height: 100vh;
     background-color: rgb(43, 43, 149);
+    transition: opacity 0.5s;
 }
 
 #contact {
     min-height: 100vh;
     background-color: blue;
+    transition: opacity 0.5s;
 }
+

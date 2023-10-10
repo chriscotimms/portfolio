@@ -1,74 +1,29 @@
-let about = document.querySelector('#about');
+const header = document.querySelector('#header');
+const about = document.querySelector('#about');
+const work = document.querySelector('#work');
+const dev = document.querySelector('#dev');
+const from = document.querySelector('#from');
+const contact = document.querySelector('#contact');
 
-let observer = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.intersectionRatio <= 0.5) {
-      about.classList.remove("reveal");
-      about.classList.add("hide");
-        console.log("do nothing");
-      } else {
-      about.classList.add("reveal");
-      about.classList.remove("hide");
-      console.log(entry.intersectionRatio);
-      
-    }
-    });
-  },
-  { threshold: 0.5 }
-);
+function callback(entries) {
+  entries.forEach((entry) => {
+    const adBox = entry.target;
+    const inSec = entry.intersectionRatio;
+    adBox.style.opacity = inSec*2.6666;
+    console.log(adBox, adBox.id, inSec);
+  })
+    //about.style.opacity = (entries[0].intersectionRatio)*2;
+}
+var options = {
+    root: null,
+    threshold: [0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75]
+}
+var io = new IntersectionObserver(callback, options);
 
-observer.observe(about);
+io.observe(header);
+io.observe(about);
+io.observe(work);
+io.observe(dev);
+io.observe(from);
+io.observe(contact);
 
-
-// ////////////////////KEYS
-
-// // variable for currently focused element
-// let focusNow = null;
-
-// document.addEventListener('focusin', function() {
-// if (focusNow !== null) {
-//     //detransition from old focus
-
-//     console.log("old"+focusNow.id);
-// }
-//   focusNow = document.activeElement;
-//   // console log focus elements
-//   console.log(focusNow.id);
-//   //transition into new element to focus
-// }, true);
-
-// document.addEventListener('mouseenter', function(event) {
-//     if (focusNow !== null) {
-//         //detransition from old focus
-//         console.log("old"+focusNow.id);
-//     }
-//     focusNow = event.target;
-//     // console log focus elements
-//     console.log(focusNow.id);
-//   }, true);
-
-// // Enter key to activate focused element like mouseclick
-// window.addEventListener("keydown", function(event) {
-//   if (event.key === "Enter") {
-//     event.preventDefault();
-//     focusNow.click();
-//   }
-// });
-
-// window.addEventListener("click", function(event) {
-//     console.log("click", event.target);
-//   });
-
-
-// //Esc Key to exit menus
-// window.addEventListener("keydown", function(event) {
-//   if (event.key === "Escape") {
-//     event.preventDefault();
-//     // sidebar2.classList.remove('side_bigger');
-//     // sidebar1.classList.remove('side_bigger');
-//     // main.classList.remove('main_smaller');
-//     // setTimeout(displayAdd, 500, sidebar1);
-//     // setTimeout(displayAdd, 500, sidebar2);
-//   }
-// });
