@@ -9,12 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <title>Portfolio - Chris Timms </title>
+    <title>Portfolio - Chris Timms</title>
 </head>
 
 <body>
 <header id="header" class="header_main">
-    <nav class="menucontainer">
+    <!-- <nav class="menucontainer"> -->
          
         <a href="#about" class="button about">
             <div class="btnName">ABOUT</div>
@@ -28,16 +28,24 @@
 
         <a href="#contact" class="button contact">
             <div class="btnName">CONTACT</div>
-            <div class="righttoLeft">Get in touch Get in touch</div>
+            <div class="righttoLeft">Get in touch</div>
         </a>
 
-        <a href="#access" class="button contact">
+        <a href="#" id="access_settings" class="button settings access_settings">
             <div class="btnName">SETTINGS</div>
-            <div class="righttoLeft">Change fonts and colour schemes</div>
+            <div class="righttoLeft">Choose your access settings</div>
         </a>
-
-    </nav>
+        <!-- </nav> -->
 </header>
+
+<dialog class="modal" id="modal">
+    <h2>Choose your access settings</h2>
+    <p>Change font size</p>
+    <p>Change colour scheme</p>
+    <p>Change font</p>
+    <button class="close-modal">close modal</button>
+</dialog>
+
 
 
 
@@ -57,14 +65,25 @@
         <h1>WORK</h1>
         <article class="article1">
         <h1>Founders and Coders Projects</h1>
-        <a href="https://chriscotimms.github.io/game4/" target="_blank">ODVAR: A Javascript-built RPG Game</a>
-        <a href="https://github.com/chriscotimms/game4" target="_blank">Github:</a>introduced lots of access approaches into a complex RPG tutorial invovling heavy use of classes.
-        <a href="https://chriscotimms.github.io/website/" target="_blank">Application Website for Founders and Coders</a>
-        <a href="https://github.com/chriscotimms/website" target="_blank">Github:</a>first implementation of "Access Settings" design.
+        <a href="https://chriscotimms.github.io/game4/" target="_blank"><h2>ODVAR: A Javascript-built RPG Game</h2></a>
+        <p>introduced lots of access approaches into a complex RPG tutorial invovling heavy use of classes.</p>
+        <p><a href="https://github.com/chriscotimms/game4" target="_blank">@Github</a></p>
+
+        <a href="https://chriscotimms.github.io/website/" target="_blank"><h2>Application Website for Founders and Coders</h2></a>
+        <p>first implementation of "Access Settings" design.</p>
+        <p><a href="https://github.com/chriscotimms/website" target="_blank">@Github</a></p>
+        
+        <a href="https://chriscotimms.github.io/game3/" target="_blank"><h2>Basic "Pong" style audio access game</h2></a>
+        <p>Using the native synthesiser in vanilla Javascript, the ball's pitch changes depending on x and y location. The paddle updates its position with a sound relative to the x position of the ball.</p>
+        <p><a href="https://github.com/chriscotimms/game3" target="_blank">@Github</a></p>
+
+        <a href="https://chriscotimms.github.io/moviedata/" target="_blank"><h2>Movie Data Project</h2></a>
+        <p>Sorting Objects and Arrays based on radio button selections in Javascript.</p>
+        <p><a href="https://github.com/chriscotimms/moviedata" target="_blank">@Github</a></p>
         </article>  
 
         <article class="article1">
-        <h1>Websites</h1>
+        <h1>Freelance Websites</h1>
         <a href="https://chriscotimms.github.io/miketimms/" target="_blank">Mike Timms</a>
         <a href="https://chriscotimms.github.io/TW/" target="_blank">Thomas Watson</a>
         </article>
@@ -101,11 +120,6 @@
     <section id="contact" class="section">
         <h1>CONTACT</h1>
         <article class="article1">chriscotimms@gmail.com</article>  
-    </section>
-
-    <section id="access" class="section">
-        <h1>ACCESS SETTINGS</h1>
-        <article class="article1">choose access settings</article>  
     </section>
 
 </main>

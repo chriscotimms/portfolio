@@ -21,7 +21,6 @@ body {
     line-height: normal;
     text-align: left;
     -webkit-font-smoothing: antialiased;
-    
 }
 
 a {
@@ -40,18 +39,14 @@ ul {
     width: 100vw;
     max-width:100%;
     min-height: 100vh;
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    /* gap: 20px 20px; */
+    /* align-content:space-around; */
+    /* align-items:center; */
 }
 
-.menucontainer {
-    justify-self: center;
-    align-self: center;
-    display:grid;
-    grid-template-columns: repeat(4, minmax(1fr, 2fr) );
-    grid-template-rows: repeat(4, minmax(1fr,2fr) );
-}
 
 
 /* HEADER - BUTTONS */
@@ -60,19 +55,27 @@ ul {
     border:none;
     shape-outside: circle();
     clip-path: circle();
-    padding: 2em;
-    font-size: 1.3em;
+    /* padding: 10%; */
+    font-size: 1em;
+    width:300px;
     overflow: hidden;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: bounce 2s;
+    animation-iteration-count:1;
 }
 
 .btnName {
-    display:block;
+  
 }
   
 .righttoLeft {
     display:none;
-    font-size: inherit;
+    min-width: 460px;
+    text-align: left;
+
 }
 
 .button:hover .btnName, .button:focus .btnName {
@@ -81,26 +84,22 @@ ul {
 }
 
 .button:hover .righttoLeft, .button:focus .righttoLeft {
-    /* background-color: #4a2fff; */
-    /* padding:0.5rem; */
-    /* transition: 0.5s; */
     display:block;
     animation: righttoLeft 10s infinite linear;
   }
   
   @keyframes righttoLeft {
     0% {
-    transform: translateX(70%);
+    transform: translateX(60%);
     }
     100% {
-      transform:translateX(-100%);
+      transform:translateX(-120%);
     } 
   }
 
 
 .button:hover, .button:focus {
     background-color: #758404;
-    /* padding:0.5rem; */
     transition: 1s;
 }
 
@@ -109,7 +108,17 @@ ul {
 }
 
 
+/* BUTTON ANIMATION STATIC */
+@keyframes bounce {
+    from { transform: translate3d(100px, 200px, 0);     }
+    to   { transform: translate3d(0, 0, 0); }
+  }
 
+
+
+
+
+/* INDIVIDUAL BUTTONS STYLING */
 .button.work {
     color: rgb(0, 255, 123);
 }
@@ -122,6 +131,30 @@ ul {
     color: rgb(255, 204, 0);
 }
 
+
+
+
+
+/* Access Settings pop up */
+.modal {
+    padding:1em;
+    max-width: 100ch;
+    margin:auto;
+
+    & > * {
+        margin: 0 0 0.5rem 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Body Section */
 .container {
     /* position: relative; */
     display:grid;
@@ -138,9 +171,6 @@ ul {
     background-color: rgb(255, 51, 122);
     /*grid-gap:0.5rem;*/
 }
-
-
-
 
 .article1 {
     background-color: rgb(129, 255, 196);

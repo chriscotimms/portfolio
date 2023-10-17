@@ -27,3 +27,21 @@ io.observe(dev);
 io.observe(from);
 io.observe(contact);
 
+
+
+
+
+// Access Settings
+const modal = document.querySelector('.modal');
+const open_Modal = document.querySelector('.access_settings');//
+const close_Modal = document.querySelector('.close-modal');
+
+open_Modal.addEventListener('click', () => {
+  modal.showModal();
+})
+
+close_Modal.addEventListener('click', () => {
+  modal.close();
+})
+
+
