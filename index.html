@@ -8,7 +8,7 @@
     <script src="index.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Castoro&family=Gentium+Book+Plus&family=Hanken+Grotesk&family=Inter+Tight&family=Roboto+Slab&family=Yatra+One&display=swap" rel="stylesheet">
     <title>Portfolio - Chris Timms</title>
 </head>
 
@@ -54,8 +54,8 @@
 
 <dialog class="modal" id="modal">
     <h2>Choose your access settings</h2>
-    <p>Font size</p>
-    <p>Font</p>
+    <p>Font size<button id="fsb1" class="asbtn">Black and White</button><button id="fsb2" class="asbtn">Night</button><button id="fsb3" class="asbtn">Alt1</button></p>
+    <p>Fonts<button id="ffb1" class="asbtn">Black and White</button><button id="ffb2" class="asbtn">Night</button><button id="ffb3" class="asbtn">Alt1</button><button id="ffb4" class="asbtn">Black and White</button><button id="ffb5" class="asbtn">Night</button><button id="ffb6" class="asbtn">Alt1</button></p>
     <p>Colour scheme<button id="csb1" class="asbtn">Black and White</button><button id="csb2" class="asbtn">Night</button><button id="csb3" class="asbtn">Alt1</button></p>
     <button class="close-modal">close modal</button>
 </dialog>
@@ -69,37 +69,51 @@
     <section id="about" class="section">
 
         <h1>ABOUT</h1>
+        <img id="portrait" src="https://github.com/chriscotimms/website/blob/main/img/chris.png?raw=true" alt="portrait of middle aged white man"></img>
         <article class="article1">
-        <p>I'm a Front-End Web Developer (in-training!) with an interest in Accessibility. I have a fine art background, and want to learn and help contribute to developing the best practices of accessible approaches and solutions to Web Development.</p>
+        <p>I'm a Front-End Web Developer with an interest in Accessibility.</br></br>
+            I have a fine art background, and want to learn and help contribute to developing the best practices of accessible approaches and solutions to Web Development.</p>
         </article>
     </section>
+
+
+    <!-- <div id="circle">MENU (cursor follow) </div>  -->
 
     <section id="work" class="section">
 
         <h1>WORK</h1>
-        <article class="article1">
-        <h1>Founders and Coders Projects</h1>
-        <a href="https://chriscotimms.github.io/game4/" target="_blank"><h2>ODVAR: A Javascript-built RPG Game</h2></a>
-        <p>introduced lots of access approaches into a complex RPG tutorial invovling heavy use of classes.</p>
-        <p><a href="https://github.com/chriscotimms/game4" target="_blank">@Github</a></p>
 
+        
+        <h2 id="fc">Founders and Coders Projects</h2>
+        <article id="odvar" class="article1">
+        <a href="https://chriscotimms.github.io/game4/" target="_blank"><h2>ODVAR: A Javascript-built RPG Game</h2></a>
+        <p>introduced lots of access approaches into a complex RPG tutorial involving heavy use of classes.</p>
+        <p><a href="https://github.com/chriscotimms/game4" target="_blank">@Github</a></p>
+        </article>
+
+        <article id="website" class="article1">
         <a href="https://chriscotimms.github.io/website/" target="_blank"><h2>Application Website for Founders and Coders</h2></a>
         <p>first implementation of "Access Settings" design.</p>
         <p><a href="https://github.com/chriscotimms/website" target="_blank">@Github</a></p>
+        </article>
         
+        <article id="pong" class="article1">
         <a href="https://chriscotimms.github.io/game3/" target="_blank"><h2>Basic "Pong" style audio access game</h2></a>
-        <p>Using the native synthesiser in vanilla Javascript, the ball's pitch changes depending on x and y location. The paddle updates its position with a sound relative to the x position of the ball.</p>
+        <p>Using the native synthesiser in vanilla Javascript. The ball's pitch changes depending on x and y location. The paddle updates its position with a sound relative to the x position of the ball.</p>
         <p><a href="https://github.com/chriscotimms/game3" target="_blank">@Github</a></p>
+        </article>
 
+        <article id="moviedata" class="article1">
         <a href="https://chriscotimms.github.io/moviedata/" target="_blank"><h2>Movie Data Project</h2></a>
         <p>Sorting Objects and Arrays based on radio button selections in Javascript.</p>
         <p><a href="https://github.com/chriscotimms/moviedata" target="_blank">@Github</a></p>
-        </article>  
+        </article>
+         
 
-        <article class="article1">
-        <h1>Freelance Websites</h1>
-        <a href="https://chriscotimms.github.io/miketimms/" target="_blank">Mike Timms</a>
-        <a href="https://chriscotimms.github.io/TW/" target="_blank">Thomas Watson</a>
+        <h2 id="fl">Freelance Websites</h2>
+        <article id="freelance" class="article1">
+        <p><a href="https://chriscotimms.github.io/miketimms/" target="_blank">Mike Timms</a></p>
+        <p><a href="https://chriscotimms.github.io/TW/" target="_blank">Thomas Watson</a></p>
         </article>
 
     </section>
@@ -107,6 +121,7 @@
     
 
     <section id="dev" class="section">
+
         <h1>HOW I GOT HERE</h1>
         <article class="article1"><a href="https://freecodecamp.org/certification/fccfa809b29-d770-4796-a1de-fbad9ddd661f/responsive-web-design" target="_blank">FreeCodeCamp Responsive Webdesign Certificate</a></article>
         <article class="article1">https://github.com/chriscotimms</article>  
@@ -118,7 +133,9 @@
     </section>
 
     <section id="from" class="section">
+        
         <h1>FROM/Previous career/education</h1>
+        
         <article class="article1">
             Audio guide / vocaleyes training / Art / media work
         </article>  
@@ -133,16 +150,19 @@
     </section>
 
     <section id="contact" class="section">
+
         <h1>CONTACT</h1>
-        <article class="article1">chriscotimms@gmail.com</article>  
+
+        <article class="article1">
+        chriscotimms@gmail.com
+        </article>  
+
     </section>
 
 </main>
 
 <footer>
-<section id="contact">
 
-</section>
 </footer>
 
 </body>
