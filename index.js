@@ -45,3 +45,51 @@ close_Modal.addEventListener('click', () => {
 })
 
 
+//Fonts
+const root = document.querySelector(":root");
+const rootStyles = getComputedStyle(root);
+let text_col = rootStyles.getPropertyValue('--txt-col');
+let bg_col = rootStyles.getPropertyValue('--bg-col');
+let font_size = rootStyles.getPropertyValue('--font-size');
+let font_family = rootStyles.getPropertyValue('--font-family');
+console.log('text colour: ', text_col);
+
+
+root.style.setProperty('--font-size', '48px' );
+root.style.setProperty('--font-family', 'Georgia' );
+
+root.style.setProperty('--txt-col', 'black' );
+// root.style.setProperty('--bg-col', 'white' );
+
+//BUTTONS = FontSize, FontFamily, ColourScheme
+const fsb1 = document.querySelector("#fsb1");
+const fsb2 = document.querySelector("#fsb2");
+const fsb3 = document.querySelector("#fsb3");
+
+const ffb1 = document.querySelector("#ffb1");
+const ffb2 = document.querySelector("#ffb2");
+const ffb3 = document.querySelector("#ffb3");
+
+const csb1 = document.querySelector("#csb1");
+const csb2 = document.querySelector("#csb2");
+const csb3 = document.querySelector("#csb3");
+
+const btnArray = document.querySelectorAll(".asbtn");
+
+
+btnArray.forEach(element => {
+    element.addEventListener("click", function(e) {
+      // console.log(e.target.id);
+      if (e.target.id === "csb1") {
+        console.log(e.target.id + "= csb1");
+      } else if (e.target.id === "csb2") {
+        console.log(e.target.id + "= csb2");
+      } else if (e.target.id === "csb3") {
+        console.log(e.target.id + "= csb3");
+      }
+    });
+});
+
+// csb1.addEventListener("click", function(e) {
+//   console.log(e.target);
+// });

@@ -1,7 +1,8 @@
 :root {
-    --font-size: 36px;
+    --font-size: 48px;
     --bg-col: rgb(233, 233, 233);
     --txt-col: black;
+    --font-family: 'Hanken Grotesk', sans-serif;
 }
 
 
@@ -15,13 +16,13 @@
 body {
     background-color:var(--bg-col);
     color: var(--txt-col);
-    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: var(--font-family);
     font-size: var(--font-size);
-    letter-spacing: normal;
-    line-height: normal;
-    text-align: left;
+    line-height:2.2em;
+    text-align:start;
     -webkit-font-smoothing: antialiased;
 }
+
 
 a {
     text-decoration: none;
@@ -42,9 +43,7 @@ ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    /* gap: 20px 20px; */
-    /* align-content:space-around; */
-    /* align-items:center; */
+    align-content:center;
 }
 
 
@@ -54,26 +53,32 @@ ul {
     background-color: rgb(252, 86, 255);
     border:none;
     shape-outside: circle();
-    clip-path: circle();
-    /* padding: 10%; */
+    clip-path: circle(150px);
     font-size: 1em;
     width:300px;
+    height:300px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    animation: bounce 2s;
-    animation-iteration-count:1;
+    
 }
 
+.firstInner {
+    background-color: rgba(207, 189, 219, 0.747);
+    padding:140px;
+    clip-path: circle(145px);
+}
+
+
+
 .btnName {
-  
+    text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5), 0px -1px 1px rgba(255, 255, 255, 0.25);
 }
   
 .righttoLeft {
     display:none;
-    min-width: 460px;
+    min-width: 800px;
     text-align: left;
 
 }
@@ -108,20 +113,38 @@ ul {
 }
 
 
-/* BUTTON ANIMATION STATIC */
-@keyframes bounce {
-    from { transform: translate3d(100px, 200px, 0);     }
-    to   { transform: translate3d(0, 0, 0); }
-  }
+
 
 
 
 
 
 /* INDIVIDUAL BUTTONS STYLING */
+
+
+/* WORK BUTTON */
 .button.work {
     color: rgb(0, 255, 123);
 }
+
+.firstInner.work {
+    animation: bounce 2s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+    
+    &:hover{
+        animation-play-state:paused;
+    }
+}
+
+/* WORK BUTTON ANIMATION */
+@keyframes bounce {
+    from { clip-path: circle(120px);}
+    to   { clip-path: circle(130px); }
+  }
+
+
 
 .button.access {
     color: rgb(255, 204, 0);
@@ -140,6 +163,8 @@ ul {
     padding:1em;
     max-width: 100ch;
     margin:auto;
+    background-color:var(--bg-col);
+    color: var(--txt-col);
 
     & > * {
         margin: 0 0 0.5rem 0;
@@ -160,26 +185,40 @@ ul {
     display:grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+    width: 100vw;
+    max-width: 100%;
 }
 
 .section {
-    height: auto;
-    font-weight: 400;
-    display:grid;
-    grid-template-rows: 100px 1fr;
-    grid-template-columns: 1fr;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word; 
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    height:auto;
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
     background-color: rgb(255, 51, 122);
-    /*grid-gap:0.5rem;*/
+    overflow-wrap: break-word; 
 }
+
 
 .article1 {
     background-color: rgb(129, 255, 196);
-    margin:1rem;
-    padding: 3rem;
+    margin:2.5vw;
+    padding: 0.6em;
     font-size: 2em;
 }
 
+.article1 h1, h2 {
+    
+}
 
+.article1 p {
+
+}
 
 
 
@@ -193,48 +232,44 @@ ul {
 }
 
 #about {
-    min-height: 100vh;
-      padding: 3rem;
-      font-size: 2em;
-      opacity:1;
-      transition: opacity 0.5s;
-}
-  
-#about h1 {
-    justify-self: center;
-    align-self: center;
+    /* min-height: 100vh;
+    max-width: 100%;
+    padding: 3rem;
+    font-size: 2em; */
+    opacity:1;
+    transition: opacity 0.5s;
 }
   
 #about p {
-    justify-self: center;
-    align-self: center;
+    /* justify-self: center;
+    align-self: center; */
 }
 
 #work {
-    min-height: 100vh;
-    background-color: rgb(144, 144, 254);
+    /* min-height: 100vh;
+    background-color: rgb(144, 144, 254); */
     transition: opacity 0.5s;
 }
 
 #access {
-    background-color: rgb(13, 13, 81);
+    /* background-color: rgb(13, 13, 81); */
 }
 
 #dev {
-    min-height: 100vh;
-    background-color: rgb(54, 54, 200);
+    /* min-height: 100vh;
+    background-color: rgb(54, 54, 200); */
     transition: opacity 0.5s;
 }
 
 #from {
-    min-height: 100vh;
-    background-color: rgb(43, 43, 149);
+    /* min-height: 100vh;
+    background-color: rgb(43, 43, 149); */
     transition: opacity 0.5s;
 }
 
 #contact {
-    min-height: 100vh;
-    background-color: blue;
+    /* min-height: 100vh;
+    background-color: blue; */
     transition: opacity 0.5s;
 }
 
