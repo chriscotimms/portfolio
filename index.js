@@ -59,16 +59,21 @@ close_Modal.addEventListener('click', () => {
 //Fonts
 const root = document.querySelector(":root");
 const rootStyles = getComputedStyle(root);
-let text_col = rootStyles.getPropertyValue('--txt-col');
-let bg_col = rootStyles.getPropertyValue('--bg-col');
 let font_size = rootStyles.getPropertyValue('--font-size');
 let font_family = rootStyles.getPropertyValue('--font-family');
+let bg_col = rootStyles.getPropertyValue('--bg-col');
+let text_col = rootStyles.getPropertyValue('--txt-col');
+let article_col = rootStyles.getPropertyValue("--article-col");
+let section_bg  = rootStyles.getPropertyValue("--section-bg");
+let button_activebg = rootStyles.getPropertyValue("--button-activebg");
+let button_innerbg = rootStyles.getPropertyValue("--button-innerbg");
+
 
 
 // root.style.setProperty('--font-size', '38px' );
 
 
-root.style.setProperty('--txt-col', 'black' );
+// root.style.setProperty('--txt-col', 'black' );
 // root.style.setProperty('--bg-col', 'white' );
 
 //BUTTONS = FontSize, FontFamily, ColourScheme
@@ -96,13 +101,25 @@ btnArray.forEach(element => {
       if (e.target.id === "csb1") {
         root.style.setProperty('--txt-col', 'rgba(0,0,0,1)' );
         root.style.setProperty('--bg-col', 'rgba(233, 233, 233, 1)' );
+        root.style.setProperty('--article-col', 'rgb(129, 255, 196)' );
+        root.style.setProperty('--section-bg', 'rgb(252, 86, 255)' );
+        root.style.setProperty('--button-activebg', 'rgb(246, 0, 250)' );
+        root.style.setProperty('--button-innerbg', 'rgba(207, 189, 219, 0.747)' );
+
       } else if (e.target.id === "csb2") {
         root.style.setProperty('--txt-col', 'rgba(185, 185, 185, 1)' );
         root.style.setProperty('--bg-col', 'rgba(50,50,50,1)' );
+        root.style.setProperty('--article-col', 'rgb(129, 255, 196)' );
+        root.style.setProperty('--section-bg', 'rgb(252, 86, 255)' );
+        root.style.setProperty('--button-activebg', 'rgb(246, 0, 250)' );
+        root.style.setProperty('--button-innerbg', 'rgba(207, 189, 219, 0.747)' );
+
       } else if (e.target.id === "csb3") {
         root.style.setProperty('--txt-col', 'white' );
         root.style.setProperty('--bg-col', 'black' );
-      } else if (e.target.id === "ffb1") {
+
+      } 
+      else if (e.target.id === "ffb1") {
         root.style.setProperty('--font-family', 'Hanken Grotesk');
       } else if (e.target.id === "ffb2") {
         root.style.setProperty('--font-family', 'Castoro');

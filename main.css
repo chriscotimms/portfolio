@@ -1,25 +1,24 @@
 :root {
-    --font-size: 24px;
-    --bg-col: rgb(233, 233, 233);
+    /* --font-size: 24px;
+    --font-family: 'Hanken Grotesk', sans-serif;
+    --bg-col: rgba(233, 233, 233, 1);
+    --txt-col: rgba(0,0,0,1);
     --article-col:rgb(129, 255, 196);
     --section-bg:rgb(252, 86, 255);
     --button-activebg:rgb(246, 0, 250);
-    --button-innerbg: rgba(207, 189, 219, 0.747);
-    --txt-col: black;
-    --font-family: 'Hanken Grotesk', sans-serif;
+    --button-innerbg: rgba(207, 189, 219, 0.747); */
 
+    --font-size: 24px;
+    --font-family: 'Hanken Grotesk', sans-serif;
+    --bg-col: rgb(56, 56, 56);
+    --txt-col: rgb(232, 230, 216);
+    --article-col:rgb(48, 0, 67);
+    --section-bg:rgb(38, 33, 56);
+    --button-activebg:rgb(180, 0, 183);
+    --button-innerbg: rgba(48, 0, 67, 0.747);
 }
 
-/* #circle {
-    height:50px;
-    width:50px;
-    margin-top:-25px;
-    margin-left:-25px;
-    position:absolute;
-    top:50%;
-    left:50%;
-    z-index:1;
-  } */
+
 
 /*BODY*/
 
@@ -293,7 +292,7 @@ ul {
 #work {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 8em 5em repeat(4, auto) 5em repeat(2, auto);
+    grid-template-rows: 8em 5em repeat(4, auto) 5em repeat(2    , auto);
     opacity:1;
     transition: opacity 0.5s;
 }
