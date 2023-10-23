@@ -1,21 +1,21 @@
 :root {
-    /* --font-size: 24px;
+    --font-size: 24px;
     --font-family: 'Hanken Grotesk', sans-serif;
     --bg-col: rgba(233, 233, 233, 1);
     --txt-col: rgba(0,0,0,1);
     --article-col:rgb(129, 255, 196);
     --section-bg:rgb(252, 86, 255);
     --button-activebg:rgb(246, 0, 250);
-    --button-innerbg: rgba(207, 189, 219, 0.747); */
+    --button-innerbg: rgba(207, 189, 219, 0.747);
 
-    --font-size: 24px;
+    /* --font-size: 24px;
     --font-family: 'Hanken Grotesk', sans-serif;
     --bg-col: rgb(58, 46, 46);
     --txt-col: rgb(232, 230, 216);
     --article-col:rgb(48, 0, 67);
     --section-bg: rgba(67, 51, 73, 0.865);
     --button-activebg:rgb(167, 117, 168);
-    --button-innerbg: rgba(67, 51, 73, 0.865);
+    --button-innerbg: rgba(67, 51, 73, 0.865); */
 }
 
 
@@ -401,4 +401,3 @@ ul {
     opacity:1;
     transition: opacity 0.5s;
 }
-

@@ -99,7 +99,7 @@ const btnArray = document.querySelectorAll(".asbtn");
 
 btnArray.forEach(element => {
     element.addEventListener("click", function(e) {
-      // console.log(e.target.id);
+      console.log(e.target.id);
       if (e.target.id === "csb1") {
         root.style.setProperty('--txt-col', 'rgba(0,0,0,1)' );
         root.style.setProperty('--bg-col', 'rgba(233, 233, 233, 1)' );
@@ -133,6 +133,8 @@ btnArray.forEach(element => {
         root.style.setProperty('--font-family', 'Yatra One');
       } else if (e.target.id === "ffb6") {
         root.style.setProperty('--font-family', 'Roboto Slab');
+
+
       } else if (e.target.id === "fsb1") {
         root.style.setProperty('--font-size', '24px');
       } else if (e.target.id === "fsb2") {
