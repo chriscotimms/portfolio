@@ -188,13 +188,109 @@ ul {
     padding:1em;
     max-width: 100ch;
     margin:auto;
-    background-color:var(--bg-col);
-    color: var(--txt-col);
-
-    & > * {
-        margin: 0 0 0.5rem 0;
-    }
+    background-color:rgba(233, 233, 233, 1);
+    color: rgba(0,0,0,1);
+    box-shadow: 20px 20px 10px black;
+    
 }
+
+.modal h2 {
+    font-size: 1.4em;
+    text-align: center; 
+    padding: 0.8em; 
+}
+
+.modal h3 {
+    font-size: 1em;
+    text-align: right;  
+}
+
+/* Styling buttons in Access Settings */
+.asbtn {
+    border: none;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.close-modal {
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+}
+
+.close-modal:hover {
+    cursor:crosshair;
+}
+
+.span_title {
+    font-weight: 900;
+}
+
+
+
+
+/* ID STYLING EACH BUTTON */
+#fsb1{
+    font-size: 24px;
+}
+
+#fsb2{
+    font-size: 30px;
+}
+
+#fsb3{
+    font-size: 38px;
+}
+
+
+#ffb1{
+    font-family: 'Hanken Grotesk';
+}
+
+#ffb2{
+    font-family: 'garamond';
+}
+
+#ffb3{
+    font-family: 'eskool';
+}
+
+#ffb4{
+    font-family: 'neutralface';
+}
+
+#ffb5{
+    font-family: 'Yatra One';
+}
+
+#ffb6{
+    font-family: 'youngserif';
+}
+
+
+#csb1{
+    background-color: rgb(129, 255, 196) ;
+    color: rgba(0,0,0,1);
+    box-shadow: 0px 10px 0px rgb(252, 86, 255), 0px -10px 0px rgb(221, 155, 222);
+}
+
+#csb2{
+    background-color: rgb(48, 0, 67);
+    color: rgb(232, 232, 232);
+    box-shadow: 0px 10px 0px rgb(31, 24, 24), 0px -10px 0px rgba(110, 83, 120, 0.865);
+}
+
+#csb3{
+    background-color: #fed9b7;
+    color: #0f171a;
+    box-shadow: 0px 10px 0px #00afb9, 0px -10px 0px #fdfcdc;
+}
+
+
+
+
+
 
 
 
@@ -429,66 +525,13 @@ ul {
 }
 
 #contact {
-    /* min-height: 100vh;
-    background-color: blue; */
+    min-height: 100vh;
+    /* background-color: blue; */
     opacity:1;
     transition: opacity 0.5s;
 }
 
 
-/* Styling buttons in Access Settings */
-#fsb1{
-    font-size: 24px;
-}
-
-#fsb2{
-    font-size: 30px;
-}
-
-#fsb3{
-    font-size: 38px;
-}
 
 
-#ffb1{
-    font-family: 'Hanken Grotesk';
-}
 
-#ffb2{
-    font-family: 'garamond';
-}
-
-#ffb3{
-    font-family: 'eskool';
-}
-
-#ffb4{
-    font-family: 'neutralface';
-}
-
-#ffb5{
-    font-family: 'Yatra One';
-}
-
-#ffb6{
-    font-family: 'youngserif';
-}
-
-
-#csb1{
-    background-color: rgb(129, 255, 196) ;
-    color: rgba(0,0,0,1);
-    box-shadow: 0px 10px 0px rgb(252, 86, 255), 0px -10px 0px rgb(221, 155, 222);
-}
-
-#csb2{
-    background-color: rgb(48, 0, 67);
-    color: rgb(232, 232, 232);
-    box-shadow: 0px 10px 0px rgb(31, 24, 24), 0px -10px 0px rgba(110, 83, 120, 0.865);
-}
-
-#csb3{
-    background-color: #fed9b7;
-    color: #0f171a;
-    box-shadow: 0px 10px 0px #00afb9, 0px -10px 0px #fdfcdc;
-}
