@@ -1,24 +1,28 @@
 :root {
-    /* --font-size: 24px;
-    --font-family: 'Hanken Grotesk', sans-serif;
+    --font-size: 24px;
+    /* --font-family: 'Hanken Grotesk', sans-serif; */
+    --font-family: 'eskool', monospace;
     --bg-col: rgba(233, 233, 233, 1);
     --txt-col: rgba(0,0,0,1);
     --article-col:rgb(129, 255, 196);
     --section-bg:rgb(252, 86, 255);
     --button-activebg:rgb(246, 0, 250);
-    --button-innerbg: rgba(207, 189, 219, 0.747); */
+    --button-innerbg: rgba(207, 189, 219, 0.747);
 
-    --font-size: 24px;
+    /* --font-size: 24px;
     --font-family: 'Hanken Grotesk', sans-serif;
     --bg-col: rgb(31, 24, 24);
     --txt-col: rgb(232, 232, 232);
     --article-col:rgb(48, 0, 67);
     --section-bg: rgba(110, 83, 120, 0.865);
     --button-activebg:rgb(221, 155, 222);
-    --button-innerbg: rgba(67, 51, 73, 0.865);
+    --button-innerbg: rgba(67, 51, 73, 0.865); */
 }
 
-
+@font-face {
+    font-family: eskool;
+    src: url(fonts/eskool.regular.ttf);
+  }
 
 /*BODY*/
 
