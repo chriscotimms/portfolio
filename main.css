@@ -1,28 +1,40 @@
 :root {
+
+    --font-family: 'Hanken Grotesk';
     --font-size: 24px;
-    /* --font-family: 'Hanken Grotesk', sans-serif; */
-    --font-family: 'eskool', monospace;
     --bg-col: rgba(233, 233, 233, 1);
     --txt-col: rgba(0,0,0,1);
     --article-col:rgb(129, 255, 196);
     --section-bg:rgb(252, 86, 255);
     --button-activebg:rgb(246, 0, 250);
-    --button-innerbg: rgba(207, 189, 219, 0.747);
-
-    /* --font-size: 24px;
-    --font-family: 'Hanken Grotesk', sans-serif;
-    --bg-col: rgb(31, 24, 24);
-    --txt-col: rgb(232, 232, 232);
-    --article-col:rgb(48, 0, 67);
-    --section-bg: rgba(110, 83, 120, 0.865);
-    --button-activebg:rgb(221, 155, 222);
-    --button-innerbg: rgba(67, 51, 73, 0.865); */
+    --button-innerbg: rgba(207, 189, 219, 0.747); 
+    --shadows-article1: rgb(221, 155, 222);
+    --shadows-img:rgb(0, 255, 132);
+    color:rgb(240, 113, 103)
 }
 
 @font-face {
     font-family: eskool;
     src: url(fonts/eskool.regular.ttf);
   }
+
+  @font-face {
+    font-family: neutralface;
+    src: url(fonts/NeutralFace.otf);
+  }
+
+  @font-face {
+    font-family: garamond;
+    src: url(fonts/EBGaramond12-Regular.ttf);
+  }
+
+
+  @font-face {
+    font-family: youngserif;
+    src: url(fonts/YoungSerif-Regular.otf);
+  }
+
+
 
 /*BODY*/
 
@@ -56,6 +68,8 @@ ul {
 }
 
 
+
+
 /*HEADER*/
 .header_main {
     width: 100vw;
@@ -75,7 +89,7 @@ ul {
     border:none;
     shape-outside: circle();
     clip-path: circle(150px);
-    font-size: 1.5em;
+    font-size: 1.3em;
     width:300px;
     height:300px;
     overflow: hidden;
@@ -99,7 +113,7 @@ ul {
   
 .righttoLeft {
     display:none;
-    min-width: 800px;
+    min-width: 1000px;
     text-align: left;
 
 }
@@ -211,6 +225,8 @@ ul {
     flex-flow: column wrap;
     align-items:center;
     padding: 1em;
+ 
+
 }
 
 .section h1 {
@@ -229,12 +245,14 @@ ul {
     padding: 0.6em;
     font-size: 2em;
     border-radius: 0.25em;
+    box-shadow: 10px 20px 0px var(--shadows-article1);
 }
 
 .article1 img {
     max-width: 1000px;
     width:100%;
-    /* padding: 0.5em; */
+    box-shadow: 20px 20px 0px var(--shadows-img);
+    margin: 20px 0 20px 0;
 }
 
 .article1 h2 {
@@ -394,6 +412,12 @@ ul {
     transition: opacity 0.5s;
 }
 
+#dev h1{
+    padding: 2em;
+    width: 100%;
+    text-align: center;
+}
+
 #from {
     /* min-height: 100vh; */
     display: flex;
@@ -409,4 +433,62 @@ ul {
     background-color: blue; */
     opacity:1;
     transition: opacity 0.5s;
+}
+
+
+/* Styling buttons in Access Settings */
+#fsb1{
+    font-size: 24px;
+}
+
+#fsb2{
+    font-size: 30px;
+}
+
+#fsb3{
+    font-size: 38px;
+}
+
+
+#ffb1{
+    font-family: 'Hanken Grotesk';
+}
+
+#ffb2{
+    font-family: 'garamond';
+}
+
+#ffb3{
+    font-family: 'eskool';
+}
+
+#ffb4{
+    font-family: 'neutralface';
+}
+
+#ffb5{
+    font-family: 'Yatra One';
+}
+
+#ffb6{
+    font-family: 'youngserif';
+}
+
+
+#csb1{
+    background-color: rgb(129, 255, 196) ;
+    color: rgba(0,0,0,1);
+    box-shadow: 0px 10px 0px rgb(252, 86, 255), 0px -10px 0px rgb(221, 155, 222);
+}
+
+#csb2{
+    background-color: rgb(48, 0, 67);
+    color: rgb(232, 232, 232);
+    box-shadow: 0px 10px 0px rgb(31, 24, 24), 0px -10px 0px rgba(110, 83, 120, 0.865);
+}
+
+#csb3{
+    background-color: #fed9b7;
+    color: #0f171a;
+    box-shadow: 0px 10px 0px #00afb9, 0px -10px 0px #fdfcdc;
 }

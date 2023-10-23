@@ -101,38 +101,48 @@ btnArray.forEach(element => {
     element.addEventListener("click", function(e) {
       console.log(e.target.id);
       if (e.target.id === "csb1") {
-        root.style.setProperty('--txt-col', 'rgba(0,0,0,1)' );
         root.style.setProperty('--bg-col', 'rgba(233, 233, 233, 1)' );
+        root.style.setProperty('--txt-col', 'rgba(0,0,0,1)' );
         root.style.setProperty('--article-col', 'rgb(129, 255, 196)' );
         root.style.setProperty('--section-bg', 'rgb(252, 86, 255)' );
         root.style.setProperty('--button-activebg', 'rgb(246, 0, 250)' );
         root.style.setProperty('--button-innerbg', 'rgba(207, 189, 219, 0.747)' );
+        root.style.setProperty('--shadows-article1', 'rgb(221, 155, 222)' );
+        root.style.setProperty('--shadows-img', 'rgb(0, 255, 132)' );
 
       } else if (e.target.id === "csb2") {
-        root.style.setProperty('--txt-col', 'rgba(185, 185, 185, 1)' );
-        root.style.setProperty('--bg-col', 'rgba(50,50,50,1)' );
-        root.style.setProperty('--article-col', 'rgb(129, 255, 196)' );
-        root.style.setProperty('--section-bg', 'rgb(252, 86, 255)' );
-        root.style.setProperty('--button-activebg', 'rgb(246, 0, 250)' );
-        root.style.setProperty('--button-innerbg', 'rgba(207, 189, 219, 0.747)' );
+        root.style.setProperty('--bg-col', 'rgb(31, 24, 24)' );
+        root.style.setProperty('--txt-col', 'rgb(232, 232, 232)' );
+        root.style.setProperty('--article-col', 'rgb(48, 0, 67)' );
+        root.style.setProperty('--section-bg', 'rgba(110, 83, 120, 0.865)' );
+        root.style.setProperty('--button-activebg', 'rgb(221, 155, 222)' );
+        root.style.setProperty('--button-innerbg', 'rgba(67, 51, 73, 0.865)' );
+        root.style.setProperty('--shadows-article1', 'rgb(221, 155, 222)' );
+        root.style.setProperty('--shadows-img', 'rgb(20, 0, 40)' );
 
       } else if (e.target.id === "csb3") {
-        root.style.setProperty('--txt-col', 'white' );
-        root.style.setProperty('--bg-col', 'black' );
+        root.style.setProperty('--bg-col', '#fdfcdc' );
+        root.style.setProperty('--txt-col', '#0f171a' );
+        root.style.setProperty('--article-col', '#fed9b7' );
+        root.style.setProperty('--section-bg', '#00afb9' );
+        root.style.setProperty('--button-activebg', 'rgb(240, 113, 103)' );
+        root.style.setProperty('--button-innerbg', '#fdfcdc' );
+        root.style.setProperty('--shadows-article1', '#81b9ff' );
+        root.style.setProperty('--shadows-img', 'rgb(255, 177, 241)' );
 
       } 
       else if (e.target.id === "ffb1") {
         root.style.setProperty('--font-family', 'Hanken Grotesk');
       } else if (e.target.id === "ffb2") {
-        root.style.setProperty('--font-family', 'Castoro');
+        root.style.setProperty('--font-family', 'garamond');
       } else if (e.target.id === "ffb3") {
-        root.style.setProperty('--font-family', 'Carter One');
+        root.style.setProperty('--font-family', 'eskool');
       } else if (e.target.id === "ffb4") {
-        root.style.setProperty('--font-family', 'Gentium Book Plus');
+        root.style.setProperty('--font-family', 'neutralface');
       } else if (e.target.id === "ffb5") {
         root.style.setProperty('--font-family', 'Yatra One');
       } else if (e.target.id === "ffb6") {
-        root.style.setProperty('--font-family', 'Roboto Slab');
+        root.style.setProperty('--font-family', 'youngserif');
 
 
       } else if (e.target.id === "fsb1") {
