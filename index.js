@@ -5,6 +5,7 @@ const odvar = document.querySelector('#odvar');
 const website = document.querySelector('#website');
 const pong = document.querySelector('#pong');
 const moviedata = document.querySelector('#moviedata');
+const memorygame = document.querySelector('#memorygame');
 const freelance = document.querySelector('#freelance');
 const freelance2 = document.querySelector('#freelance2');
 const dev = document.querySelector('#dev');
@@ -15,14 +16,14 @@ function callback(entries) {
   entries.forEach((entry) => {
     const adBox = entry.target;
     const inSec = entry.intersectionRatio;
-    adBox.style.opacity = inSec*2.6666;
-    console.log(adBox, inSec*2.66);
+    adBox.style.opacity = inSec*10;
+    console.log(adBox, inSec*10);
   })
     //about.style.opacity = (entries[0].intersectionRatio)*2;
 }
 var options = {
     root: null,
-    threshold: [0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75]
+    threshold: [0, 0.05, 0.1]
 }
 var io = new IntersectionObserver(callback, options);
 
@@ -32,6 +33,7 @@ io.observe(odvar);
 io.observe(website);
 io.observe(pong);
 io.observe(moviedata);
+io.observe(memorygame);
 io.observe(freelance);
 io.observe(freelance2);
 io.observe(dev);
