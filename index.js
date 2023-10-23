@@ -17,7 +17,8 @@ function callback(entries) {
     const adBox = entry.target;
     const inSec = entry.intersectionRatio;
     adBox.style.opacity = inSec*10;
-    console.log(adBox, inSec*10);
+    // console.log(adBox, inSec*10);
+
   })
     //about.style.opacity = (entries[0].intersectionRatio)*2;
 }

@@ -123,32 +123,34 @@ ul {
     display:none;
     min-width: 1000px;
     text-align: left;
+    
 
 }
 
 .button:hover .btnName, .button:focus .btnName {
     display:none;
-    transition: 4s;
 }
 
 .button:hover .righttoLeft, .button:focus .righttoLeft {
     display:block;
-    animation: righttoLeft 10s infinite linear;
+    animation-name: righttoLeftAni;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
   
-  @keyframes righttoLeft {
+  @keyframes righttoLeftAni {
     0% {
-    transform: translateX(60%);
+    transform: translateX(67%);
     }
     100% {
-      transform:translateX(-120%);
+      transform:translateX(-20%);
     } 
   }
 
 
 .button:hover, .button:focus {
     background-color: var(--button-activebg); 
-    transition: 1s;
     background-size: 0% 4px;
 }
 
@@ -166,23 +168,22 @@ ul {
 /* INDIVIDUAL BUTTONS STYLING */
 
 
-
+ 
 .firstInner.work {
-    animation: bounce 2s;
+    animation: bounce 4s;
     animation-timing-function: linear;
     animation-iteration-count:infinite;
     animation-direction: alternate;
     
-    &:hover{
+    &:hover {
         animation-play-state:paused;
     }
 }
 
-/* WORK BUTTON ANIMATION */
 @keyframes bounce {
     from { clip-path: circle(120px);}
-    to   { clip-path: circle(130px); }
-  }
+    to   { clip-path: circle(150px); }
+  } 
 
 
 
@@ -229,7 +230,6 @@ ul {
 }
 
 .close-modal:hover {
-    cursor:crosshair;
     cursor:
     url(img/close.svg),
     auto;
@@ -304,7 +304,19 @@ ul {
 
 
 
+/* BACK BUTTON */
+.backbtn {
+    left:25px;
+    bottom:25px;
+    position: fixed;
+    z-index:4;
+    opacity:0.5;
+}
 
+.backbtn a:hover {
+    cursor:url(img/up.svg),
+    auto;
+}
 
 
 
