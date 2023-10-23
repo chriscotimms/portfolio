@@ -57,9 +57,18 @@ h1 {
     display:revert;
 }
 
-a {
+a, a:visited {
     text-decoration: none;
     color: inherit;
+    background-image: linear-gradient(var(--txt-col), var(--txt-col));
+    background-size: 0% 4px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 1s cubic-bezier(0.095, 0.82, 0.165, 1);
+}
+
+a:hover, a:active {
+    background-size: 100% 4px;
 }
 
 ul {
@@ -96,7 +105,6 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;        
-    
 }
 
 .firstInner {
@@ -141,6 +149,7 @@ ul {
 .button:hover, .button:focus {
     background-color: var(--button-activebg); 
     transition: 1s;
+    background-size: 0% 4px;
 }
 
 .button:active {
@@ -221,6 +230,9 @@ ul {
 
 .close-modal:hover {
     cursor:crosshair;
+    cursor:
+    url(img/close.svg),
+    auto;
 }
 
 .span_title {
